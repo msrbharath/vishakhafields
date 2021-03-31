@@ -33,7 +33,7 @@ const EmiCalculator = () => {
                     src="https://groww.in/pages/calculators/emi-calculator/"
                     width="100%" 
                     height="100%" 
-                    scrolling="yes" 
+                    scrolling="no" 
                 ></iframe>
             </Container>
         </Section>
