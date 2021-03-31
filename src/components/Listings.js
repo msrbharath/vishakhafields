@@ -3,7 +3,7 @@ import { IoMdArrowRoundForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import HomeOne from '../images/img1.jpg';
-import HomeTwo from '../images/img2.jpg';
+import HomeTwo from '../images/img3.jpg';
 
 const Section = styled.section`
     width: 100%;

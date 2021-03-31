@@ -1,5 +1,5 @@
 import ImageOne from '../images/img1.jpg';
-import ImageTwo from '../images/img2.jpg';
+import ImageTwo from '../images/img3.jpg';
 
 
 export const InfoData = {
