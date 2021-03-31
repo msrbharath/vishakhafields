@@ -19,16 +19,8 @@ export const SliderData = [
         price: '₹10,00,000',
         path: '/home2',
         label: 'View Home',
-        image: ImageTwo,
-        alt: 'House2'
-    },
-    {
-        title: 'Luxury Villa in Kovilpalayam, Coimbatore',
-        price: '₹15,00,000',
-        path: '/home3',
-        label: 'View Home',
         image: ImageThree,
-        alt: 'House'
+        alt: 'House2'
     },
     {
         title: 'Industrial Site lands near Kovilpalayam, Coimbatore',
