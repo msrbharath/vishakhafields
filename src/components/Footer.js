@@ -150,7 +150,7 @@ const Footer = () => {
               <Instagram />
             </a>
             <a
-              href='//www.facebook.com/srivishakhafields'
+              href='//www.facebook.com/Vishakhafields/'
               rel='noopener noreferrer'
               target='_blank'
             >

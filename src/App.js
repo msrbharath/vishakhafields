@@ -20,6 +20,7 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 import "./App.css";
 import ViewHomes from './pages/ViewHomes';
+import EmiCalc from './pages/EmiCalc';
 
 
 function App() {
@@ -54,8 +55,8 @@ function App() {
         <Route path='/rentals' component={Rentals} />
         <Route path='/contact' component={Contact} />
         <Route path='/viewhome' component={ViewHomes} />
+        <Route path='/emicalc' component={EmiCalc} />
       </Switch>
-      <EmiCalculator/>
       <Footer />
       {/* Phone icon */}
       <a
