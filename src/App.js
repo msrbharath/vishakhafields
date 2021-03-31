@@ -19,6 +19,7 @@ import Footer from './components/Footer';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import "./App.css";
+import ViewHomes from './pages/ViewHomes';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path='/homes' component={Homes} />
         <Route path='/rentals' component={Rentals} />
         <Route path='/contact' component={Contact} />
+        <Route path='/viewhome' component={ViewHomes} />
       </Switch>
       <EmiCalculator/>
       <Footer />

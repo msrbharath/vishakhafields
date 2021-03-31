@@ -8,7 +8,7 @@ export const SliderData = [
     {
         title: 'Affordable Induvidual houses near Kovilpalayam, Coimbatore',
         price: '₹5,00,000',
-        path: '/home1',
+        path: '/viewhome',
         label: 'View Home',
         image: ImageOne,
         alt: 'House'
@@ -16,7 +16,7 @@ export const SliderData = [
     {
         title: 'Low cost Villas near Kovilpalayam, Coimbatore',
         price: '₹10,00,000',
-        path: '/home2',
+        path: '/viewhome',
         label: 'View Home',
         image: ImageThree,
         alt: 'House2'
@@ -24,7 +24,7 @@ export const SliderData = [
     {
         title: 'Industrial Site lands near Kovilpalayam, Coimbatore',
         price: '₹5,00,000',
-        path: '/home1',
+        path: '/viewsite',
         label: 'View Site',
         image: ImageFour,
         alt: 'Site'
@@ -32,7 +32,7 @@ export const SliderData = [
     {
         title: 'Industrial Site lands in Coimbatore',
         price: '₹10,00,000',
-        path: '/home2',
+        path: '/viewsite',
         label: 'View Site',
         image: ImageFive,
         alt: 'Site2'
