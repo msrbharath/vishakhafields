@@ -27,7 +27,7 @@ const Icon = styled.div`
     background: transparent;
     font-size: 2rem;
     cursor: pointer;
-    outline: none
+    outline: none;
 `;
 
 const CloseIcon = styled(FaTimes)`
@@ -43,7 +43,7 @@ const DropdownMenu = styled.div`
     text-align: center;
     margin-bottom: 4rem;
 
-    @media screen and (max-width: 480px){
+    @media screen and (max-width: 480px) {
         grid-template-rows: repeat(4, 60px);
     }
 `;
@@ -52,13 +52,13 @@ const DropdownLink = styled(Link)`
     align-items: center;
     justify-content: center;
     color: #fff;
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     text-decoration: none;
     list-style: none;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 
-    &:hover{
+    &:hover {
         color: #000d1a;
     }
 `;
@@ -67,11 +67,11 @@ const BtnWrap = styled.div`
     justify-content: center;
 `;
 
-const Dropdown = ({isOpen, toggle}) => {
+const Dropdown = ({ isOpen, toggle }) => {
     return (
         <DropdownContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle}>
-                <CloseIcon/>
+                <CloseIcon />
             </Icon>
             <DropdownWrapper>
                 <DropdownMenu>
@@ -82,13 +82,13 @@ const Dropdown = ({isOpen, toggle}) => {
                     ))}
                 </DropdownMenu>
                 <BtnWrap>
-                    <Button primary="true" big="true" to="/contact">
+                    <Button primary='true' round='true' big='true' to='/contact'>
                         Contact Us
                     </Button>
                 </BtnWrap>
             </DropdownWrapper>
         </DropdownContainer>
-    )
-}
+    );
+};
 
-export default Dropdown
+export default Dropdown;

@@ -3,7 +3,9 @@ import styled, {css} from 'styled-components/macro';
 import {Link, useLocation } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
-import {FaBars} from 'react-icons/fa';
+//import {FaBars} from 'react-icons/fa';
+import Bars from '../images/bars.svg';
+import SriVishakha from '../images/SriVishakhaFields.svg';
 
 const Nav = styled.nav`
     height: 60px;
@@ -27,15 +29,17 @@ const NavLink = css`
 
 const Logo = styled(Link)`
     ${NavLink}
-    background: url("/srivishakha.png") no-repeat; 
+    background-image: url(${SriVishakha}); 
     font-style: italic;
+    display: block;
 `;
 
-const MenuBars = styled(FaBars)`
+const MenuBars = styled.i`
     display: none;
 
-    @media screen and (max-width: 768px){
-        display:block;
+    @media screen and (max-width: 768px) {
+        display: block;
+        background-image: url(${Bars});
         background-size: contain;
         height: 40px;
         width: 40px;
@@ -116,7 +120,7 @@ const Navbar = ({toggle}) => {
                 <Button to="/contact" primary='true'>Contact us</Button>
             </NavBtn>
         </Nav>
-    )
-}
+    );
+};
 
 export default Navbar;

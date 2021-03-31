@@ -1,20 +1,22 @@
 import ImageOne from '../images/img1.jpg';
 import ImageTwo from '../images/img2.jpg';
 import ImageThree from '../images/img3.jpg';
+import ImageFour from '../images/6.jpg';
+import ImageFive from '../images/9.jpg';
 
 
 export const SliderData = [
     {
-        title: 'Luxury Villa in Kovilpalayam, Coimbatore',
-        price: '5,00,000',
+        title: 'Affordable Induvidual houses near Kovilpalayam, Coimbatore',
+        price: '₹5,00,000',
         path: '/home1',
         label: 'View Home',
         image: ImageOne,
         alt: 'House'
     },
     {
-        title: 'Luxury Villa in Kovilpalayam, Coimbatore',
-        price: '10,00,000',
+        title: 'Low cost Villas near Kovilpalayam, Coimbatore',
+        price: '₹10,00,000',
         path: '/home2',
         label: 'View Home',
         image: ImageTwo,
@@ -22,10 +24,26 @@ export const SliderData = [
     },
     {
         title: 'Luxury Villa in Kovilpalayam, Coimbatore',
-        price: '15,00,000',
+        price: '₹15,00,000',
         path: '/home3',
         label: 'View Home',
         image: ImageThree,
         alt: 'House'
+    },
+    {
+        title: 'Industrial Site lands near Kovilpalayam, Coimbatore',
+        price: '₹5,00,000',
+        path: '/home1',
+        label: 'View Site',
+        image: ImageFour,
+        alt: 'Site'
+    },
+    {
+        title: 'Industrial Site lands in Coimbatore',
+        price: '₹10,00,000',
+        path: '/home2',
+        label: 'View Site',
+        image: ImageFive,
+        alt: 'Site2'
     }
 ]
