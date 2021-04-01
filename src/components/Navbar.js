@@ -117,7 +117,7 @@ const Navbar = ({toggle}) => {
                 ))}
             </NavMenu>
             <NavBtn>
-                <Button to="/contact" primary='true'>Contact us</Button>
+                <Button to="/enquire" primary='true'>Enquire Now</Button>
             </NavBtn>
         </Nav>
     );
