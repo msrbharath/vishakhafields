@@ -82,6 +82,11 @@ const Dropdown = ({ isOpen, toggle }) => {
                     ))}
                 </DropdownMenu>
                 <BtnWrap>
+                    <Button primary='true' round='true' big='true' to='/book'>
+                        Book A Site
+                    </Button>
+                </BtnWrap>
+                <BtnWrap>
                     <Button primary='true' round='true' big='true' to='/contact'>
                         Contact Us
                     </Button>

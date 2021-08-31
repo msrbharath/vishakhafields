@@ -117,6 +117,9 @@ const Navbar = ({toggle}) => {
                 ))}
             </NavMenu>
             <NavBtn>
+                <Button to="/book" primary='true'>Book A Site</Button>
+            </NavBtn>
+            <NavBtn>
                 <Button to="/enquire" primary='true'>Enquire Now</Button>
             </NavBtn>
         </Nav>

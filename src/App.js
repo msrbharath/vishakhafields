@@ -21,6 +21,7 @@ import 'aos/dist/aos.css';
 import "./App.css";
 import ViewHomes from './pages/ViewHomes';
 import EmiCalc from './pages/EmiCalc';
+import Booking from './components/Booking';
 
 
 function App() {
@@ -56,25 +57,26 @@ function App() {
         <Route path='/contact' component={Contact} />
         <Route path='/viewhome' component={ViewHomes} />
         <Route path='/emicalc' component={EmiCalc} />
+        <Route path='/book' component={Booking} />
       </Switch>
       <Footer />
       {/* Phone icon */}
       <a
         href="tel:+919944930096"
-        class="phone_float"
+        className="phone_float"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fa fa-phone phone-icon"></i>
+        <i className="fa fa-phone phone-icon"></i>
       </a>
       {/* WhatsApp icon */}
       <a
         href="https://wa.me/919944930096"
-        class="whatsapp_float"
+        className="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fa fa-whatsapp whatsapp-icon"></i>
+        <i className="fa fa-whatsapp whatsapp-icon"></i>
       </a>
     </div>
   );
