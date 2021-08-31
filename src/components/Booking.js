@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import { Button } from './Button';
-import BookingLayout from '../images/vishakhafields_dir.svg';
 
 const Section = styled.section`
     background: #000d1a;
@@ -76,7 +75,7 @@ const Booking = () => {
     let color2= "gold";
     let color3= "gold";
     let color4= "gold";
-    let color5= "gold";
+    let color5= "white";
     let color6= "gold";
     let color7= "gold";
     let color8= "gold";
@@ -89,13 +88,13 @@ const Booking = () => {
     let color15= "gold";
     let color16= "gold";
     let color17= "gold";
-    let color18= "gold";
+    let color18= "white";
     let color19= "gold";
-    let color20= "gold";
-    let color21= "gold";
-    let color22= "gold";
-    let color23= "gold";
-    let color24= "gold";
+    let color20= "white";
+    let color21= "white";
+    let color22= "white";
+    let color23= "white";
+    let color24= "white";
     let color25= "gold";
     let color26= "gold";
     let color27= "gold";
