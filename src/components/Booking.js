@@ -71,106 +71,594 @@ const svgClass = styled.img`
 const Booking = () => {
     const [color, setColor] = useState("white");
     const [sites, setSites] = useState({});
-    let color1= "gold";
-    let color2= "gold";
-    let color3= "gold";
-    let color4= "gold";
-    let color5= "white";
-    let color6= "gold";
-    let color7= "gold";
-    let color8= "gold";
-    let color9= "gold";
-    let color10= "gold";
-    let color11= "gold";
-    let color12= "gold";
-    let color13= "gold";
-    let color14= "gold";
-    let color15= "gold";
-    let color16= "gold";
-    let color17= "gold";
-    let color18= "white";
-    let color19= "gold";
-    let color20= "white";
-    let color21= "white";
-    let color22= "white";
-    let color23= "white";
-    let color24= "white";
-    let color25= "gold";
-    let color26= "gold";
-    let color27= "gold";
-    let color28= "gold";
-    let color29= "gold";
-    let color30= "gold";
-    let color31= "gold";
-    let color32= "gold";
-    let color33= "gold";
-    let color34= "gold";
-    let color35= "gold";
-    let color36= "gold";
-    let color37= "gold";
-    let color38= "gold";
-    let color39= "gold";
-    let color40= "gold";
-    let color41= "gold";
-    let color42= "gold";
-    let color43= "gold";
-    let color44= "gold";
-    let color45= "gold";
-    let color46= "gold";
-    let color47= "gold";
-    let color48= "gold";
-    let color49= "gold";
-    let color50= "gold";
-    let color51= "gold";
-    let color52= "gold";
-    let color53= "gold";
-    let color54= "gold";
-    let color55= "gold";
-    let color56= "gold";
-    let color57= "gold";
-    let color58= "gold";
-    let color59= "gold";
-    let color60= "gold";
-    let color61= "gold";
-    let color62= "gold";
-    let color63= "gold";
-    let color64= "gold";
-    let color65= "gold";
-    let color66= "gold";
-    let color67= "gold";
-    let color68= "gold";
-    let color69= "gold";
-    let color70= "gold";
-    let color71= "gold";
-    let color72= "gold";
-    let color73= "gold";
-    let color74= "gold";
-    let color75= "gold";
-    let color76= "gold";
-    let color77= "gold";
-    let color78= "gold";
-    let color79= "gold";
-    let color80= "gold";
-    let color81= "gold";
-    let color82= "gold";
-    let color83= "gold";
-    let color84= "gold";
-    let color85= "gold";
-    let color86= "gold";
-    let color87= "gold";
+    const [color1, setColor1]= useState("gold");
+    const [color2, setColor2]= useState("gold");
+    const [color3, setColor3]= useState("gold");
+    const [color4, setColor4]= useState("gold");
+    const [color5, setColor5]= useState("white");
+    const [color6, setColor6]= useState("gold");
+    const [color7, setColor7]= useState("gold");
+    const [color8, setColor8]= useState("gold");
+    const [color9, setColor9]= useState("gold");
+    const [color10, setColor10]= useState("gold");
+    const [color11, setColor11]= useState("gold");
+    const [color12, setColor12]= useState("gold");
+    const [color13, setColor13]= useState("gold");
+    const [color14, setColor14]= useState("gold");
+    const [color15, setColor15]= useState("gold");
+    const [color16, setColor16]= useState("gold");
+    const [color17, setColor17]= useState("gold");
+    const [color18, setColor18]= useState("white");
+    const [color19, setColor19]= useState("gold");
+    const [color20, setColor20]= useState("white");
+    const [color21, setColor21]= useState("white");
+    const [color22, setColor22]= useState("white");
+    const [color23, setColor23]= useState("white");
+    const [color24, setColor24]= useState("white");
+    const [color25, setColor25]= useState("white");
+    const [color26, setColor26]= useState("white");
+    const [color27, setColor27]= useState("white");
+    const [color28, setColor28]= useState("gold");
+    const [color29, setColor29]= useState("gold");
+    const [color30, setColor30]= useState("white");
+    const [color31, setColor31]= useState("white");
+    const [color32, setColor32]= useState("white");
+    const [color33, setColor33]= useState("white");
+    const [color34, setColor34]= useState("gold");
+    const [color35, setColor35]= useState("gold");
+    const [color36, setColor36]= useState("white");
+    const [color37, setColor37]= useState("gold");
+    const [color38, setColor38]= useState("gold");
+    const [color39, setColor39]= useState("gold");
+    const [color40, setColor40]= useState("gold");
+    const [color41, setColor41]= useState("gold");
+    const [color42, setColor42]= useState("gold");
+    const [color43, setColor43]= useState("gold");
+    const [color44, setColor44]= useState("gold");
+    const [color45, setColor45]= useState("gold");
+    const [color46, setColor46]= useState("gold");
+    const [color47, setColor47]= useState("white");
+    const [color48, setColor48]= useState("white");
+    const [color49, setColor49]= useState("gold");
+    const [color50, setColor50]= useState("gold");
+    const [color51, setColor51]= useState("gold");
+    const [color52, setColor52]= useState("gold");
+    const [color53, setColor53]= useState("gold");
+    const [color54, setColor54]= useState("white");
+    const [color55, setColor55]= useState("white");
+    const [color56, setColor56]= useState("white");
+    const [color57, setColor57]= useState("white");
+    const [color58, setColor58]= useState("white");
+    const [color59, setColor59]= useState("white");
+    const [color60, setColor60]= useState("gold");
+    const [color61, setColor61]= useState("gold");
+    const [color62, setColor62]= useState("gold");
+    const [color63, setColor63]= useState("white");
+    const [color64, setColor64]= useState("white");
+    const [color65, setColor65]= useState("white");
+    const [color66, setColor66]= useState("white");
+    const [color67, setColor67]= useState("gold");
+    const [color68, setColor68]= useState("gold");
+    const [color69, setColor69]= useState("white");
+    const [color70, setColor70]= useState("gold");
+    const [color71, setColor71]= useState("white");
+    const [color72, setColor72]= useState("white");
+    const [color73, setColor73]= useState("gold");
+    const [color74, setColor74]= useState("gold");
+    const [color75, setColor75]= useState("gold");
+    const [color76, setColor76]= useState("gold");
+    const [color77, setColor77]= useState("gold");
+    const [color78, setColor78]= useState("gold");
+    const [color79, setColor79]= useState("white");
+    const [color80, setColor80]= useState("white");
+    const [color81, setColor81]= useState("white");
+    const [color82, setColor82]= useState("white");
+    const [color83, setColor83]= useState("white");
+    const [color84, setColor84]= useState("gold");
+    const [color85, setColor85]= useState("gold");
+    const [color86, setColor86]= useState("gold");
+    const [color87, setColor87]= useState("gold");
     
-    function changeColor() {
-        console.log("Hello")
-        setColor((prevColor) => {
-          if(prevColor=== "green"){
-              console.log(document.getElementById('path55')?.getAttribute('fill'))
-            return "white"
-          }else{
-              setSites((prevSite) => {
-
-              })
+    function changeColor(prevColor) {
+        if(prevColor=== "gold"){
+            return "gold"
+          }else if(prevColor!== "green"){
             return "green"
+          }else{
+              return "white"
           }
+      }
+      function changeColor1() {
+        setColor1((prevColor) => {
+          return changeColor(prevColor)
+        })
+      }
+      function changeColor2() {
+        setColor2((prevColor) => {
+          return changeColor(prevColor)
+        })
+      }
+      function changeColor3() {
+        setColor3((prevColor) => {
+          return changeColor(prevColor)
+        })
+      }
+      function changeColor4() {
+        setColor4((prevColor) => {
+          return changeColor(prevColor)
+        })
+      }
+      function changeColor5() {
+        setColor5((prevColor) => {
+          return changeColor(prevColor)
+        })
+      }
+      function changeColor6() {
+        setColor6((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor7() {
+        setColor7((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor8() {
+        setColor8((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor9() {
+        setColor9((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor10() {
+        setColor10((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor11() {
+        setColor11((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor12() {
+        setColor12((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor13() {
+        setColor13((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor14() {
+        setColor14((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor15() {
+        setColor15((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor16() {
+        setColor16((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor17() {
+        setColor17((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor18() {
+        setColor18((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor19() {
+        setColor19((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor20() { 
+        setColor20((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor21() {
+        setColor21((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor22() {
+        setColor22((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor23() {
+        setColor23((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor24() {
+        setColor24((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor25() {
+        setColor25((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor26() {
+        setColor26((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor27() {
+        setColor27((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor28() {
+        setColor28((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor29() {
+        setColor29((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor30() {
+        setColor30((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor31() {
+        setColor31((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor32() {
+        setColor32((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor33() {
+        setColor33((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor34() {
+        setColor34((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor35() {
+        setColor35((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor36() {
+        setColor36((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor37() {
+        setColor37((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor38() {
+        setColor38((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor39() {
+        setColor39((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor40() {
+        setColor40((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor41() {
+        setColor41((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor42() {
+        setColor42((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor43() {
+        setColor43((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor44() {
+        setColor44((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor45() {
+        setColor45((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor46() {
+        setColor46((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor47() {
+        setColor47((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor48() {
+        setColor48((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor49() {
+        setColor49((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor50() {
+        setColor50((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor51() {
+        setColor51((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor52() {
+        setColor52((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor53() {
+        setColor53((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor54() {
+        setColor54((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor55() {
+        setColor55((prevColor) => {
+            return changeColor(prevColor)
+        })
+      }
+      function changeColor56() {
+        setColor56((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor57() {
+        setColor57((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor58() {
+        setColor58((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor59() {
+        setColor59((prevColor) => {
+           return changeColor(prevColor)
+
+        })
+      }
+      function changeColor60() {
+        setColor60((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor61() {
+        setColor61((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor62() {
+        setColor62((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor63() {
+        setColor63((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor64() {
+        setColor64((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor65() {
+        setColor65((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor66() {
+        setColor66((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor67() {
+        setColor67((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor68() {
+        setColor68((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor69() {
+        setColor69((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor70() {
+        setColor70((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor71() {
+        setColor71((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor72() {
+        setColor72((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor73() {
+        setColor73((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor74() {
+        setColor74((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor75() {
+        setColor75((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor76() {
+        setColor76((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor77() {
+        setColor77((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor78() {
+        setColor78((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor79() {
+        setColor79((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor80() {
+        setColor80((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor81() {
+        setColor81((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor82() {
+        setColor82((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor83() {
+        setColor83((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor84() {
+        setColor84((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor85() {
+        setColor85((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor86() {
+        setColor86((prevColor) => {
+            return changeColor(prevColor)
+
+        })
+      }
+      function changeColor87() {
+        setColor87((prevColor) => {
+            return changeColor(prevColor)
+
         })
       }
     return (
@@ -268,74 +756,80 @@ const Booking = () => {
           ></path>
           <path
             id="path55"
-            fill={color}
+            fill={color55}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M11.099 66.892l16.498 1 1.3-29.896L9.01 40z"
-            onClick={changeColor}
+            onClick={changeColor55}
           ></path>
           <path
             id="path56"
-            fill="none"
+            fill={color56}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M27.597 67.892l15.198 1 .6-32.696-14.498 1.8z"
+            onClick={changeColor56}
           ></path>
           <path
             id="path57"
-            fill="none"
+            fill={color57}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M42.795 68.892l15.598 1.1 1.3-35.896-16.298 2.1z"
+            onClick={changeColor57}
           ></path>
           <path
             id="path58"
-            fill="none"
+            fill={color58}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M58.393 69.992l14.999 1 1.7-38.896-15.399 2z"
+            onClick={changeColor58}
           ></path>
           <path
             id="path59"
-            fill="none"
+            fill={color59}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M73.392 70.992l15.198 1 2.2-41.696-15.699 1.8z"
+            onClick={changeColor59}
           ></path>
           <path
             id="path61"
-            fill="gold"
+            fill={color61}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M88.59 71.992l19.098 1.6 1.7-1.9 1.5-19.698-21.198-.7z"
+            onClick={changeColor61}
           ></path>
           <path
             id="path60"
-            fill="gold"
+            fill={color60}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M89.69 51.294l21.197.7 1.8-24.197-21.897 2.5z"
+            onClick={changeColor60}
           ></path>
           <path
             id="pathgarden1"
@@ -349,317 +843,348 @@ const Booking = () => {
           ></path>
           <path
             id="path62"
-            fill="gold"
+            fill={color62}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M200.365 17.416l-1.005 13.648 17.165 1.004 1.34-16.913z"
+            onClick={changeColor62}
           ></path>
           <path
             id="path63"
-            fill="none"
+            fill={color63}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M217.865 15.155l-1.34 16.913 17.332 1.424 1.507-20.263z"
+            onClick={changeColor63}
           ></path>
           <path
             id="path64"
-            fill="none"
+            fill={color64}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M233.857 33.492l16.913 1.172 1.507-23.36-16.913 1.925z"
+            onClick={changeColor64}
           ></path>
           <path
             id="path65"
-            fill="none"
+            fill={color65}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M250.77 34.664l10.885.754 1.675-25.454-11.053 1.34z"
+            onClick={changeColor65}
           ></path>
           <path
             id="path66"
-            fill="none"
+            fill={color66}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M261.655 35.418l12.81 1.004 1.34-28.049-12.475 1.59z"
+            onClick={changeColor66}
           ></path>
           <path
             id="path67"
-            fill="gold"
+            fill={color67}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M274.466 36.422l12.56 1.005L288.078 7l-12.273 1.373z"
+            onClick={changeColor67}
           ></path>
           <path
             id="path78"
-            fill="gold"
+            fill={color78}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M197.602 61.709l-1.005 16.662 1.424 1.675 6.614.25 1.675-17.917z"
+            onClick={changeColor78}
           ></path>
           <path
             id="path79"
-            fill="none"
+            fill={color79}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M204.635 80.297l8.96.67 1.674-18.002-8.96-.586z"
+            onClick={changeColor79}
           ></path>
           <path
             id="path80"
-            fill="none"
+            fill={color80}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M213.594 80.967l8.876.67 1.758-18.086-8.959-.586z"
+            onClick={changeColor80}
           ></path>
           <path
             id="path81"
-            fill="none"
+            fill={color81}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M222.47 81.636l8.924.531 1.656-17.919-8.822-.697z"
+            onClick={changeColor81}
           ></path>
           <path
             id="path82"
-            fill="none"
+            fill={color82}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M231.394 82.167l8.783.653 1.757-17.87-8.884-.702z"
+            onClick={changeColor82}
           ></path>
           <path
             id="path83"
-            fill="none"
+            fill={color83}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M240.177 82.82l8.885.602 1.807-17.768-8.935-.703z"
+            onClick={changeColor83}
           ></path>
           <path
             id="path84"
-            fill="gold"
+            fill={color84}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M249.062 83.422l8.884.552 1.757-17.718-8.834-.602z"
+            onClick={changeColor84}
           ></path>
           <path
             id="path85"
-            fill="gold"
+            fill={color85}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M257.946 83.974l8.935.703 1.656-17.769-8.834-.652z"
+            onClick={changeColor85}
           ></path>
           <path
             id="path86"
-            fill="gold"
+            fill={color86}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M266.88 84.677l9.186.703 1.155-17.769-8.684-.703z"
+            onClick={changeColor86}
           ></path>
           <path
             id="path87"
-            fill="gold"
+            fill={color87}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M276.066 85.38l9.838.702.452-17.818-9.135-.653z"
+            onClick={changeColor87}
           ></path>
           <path
             id="path68"
-            fill="gold"
+            fill={color68}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M286.356 68.264l.401-18.12-8.482-.603-1.054 18.07z"
+            onClick={changeColor68}
           ></path>
           <path
             id="path69"
-            fill="none"
+            fill={color69}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M278.275 49.541l-7.981-.602-1.757 17.97 8.684.702z"
+            onClick={changeColor69}
           ></path>
           <path
             id="path70"
-            fill="gold"
+            fill={color70}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M270.294 48.939l-8.885-.602-1.706 17.919 8.834.652z"
+            onClick={changeColor70}
           ></path>
           <path
             id="path71"
-            fill="none"
+            fill={color71}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M261.41 48.337l-8.935-.703-1.606 18.02 8.834.602z"
+            onClick={changeColor71}
           ></path>
           <path
             id="path72"
-            fill="none"
+            fill={color72}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M252.475 47.634l-8.834-.853-1.707 18.17 8.935.703z"
+            onClick={changeColor72}
           ></path>
           <path
             id="path73"
-            fill="gold"
+            fill={color73}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M243.64 46.78l-8.833-.602-1.757 18.07 8.884.703z"
+            onClick={changeColor73}
           ></path>
           <path
             id="path74"
-            fill="gold"
+            fill={color74}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M234.807 46.178l-8.935-.702-1.644 18.075 8.822.697z"
+            onClick={changeColor74}
           ></path>
           <path
             id="path75"
-            fill="gold"
+            fill={color75}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M225.872 45.476l-8.884-.653-1.719 18.142 8.959.586z"
+            onClick={changeColor75}
           ></path>
           <path
             id="path76"
-            fill="gold"
+            fill={color76}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M216.988 44.823l-8.834-.803-1.844 18.359 8.959.586z"
+            onClick={changeColor76}
           ></path>
           <path
             id="path77"
-            fill="gold"
+            fill={color77}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M208.154 44.02l-9.487-.703-1.065 18.392 8.708.67z"
+            onClick={changeColor77}
           ></path>
           <path
             id="path54"
-            fill="none"
+            fill={color54}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M12.748 82.51l20.096 1.859-1.682 27.975-16.2-.797z"
+            onClick={changeColor54}
           ></path>
           <path
             id="path53"
-            fill="gold"
+            fill={color53}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M32.844 84.369l21.248 1.416 1.327 2.125-1.77 17.971-22.044-1.947z"
+            onClick={changeColor53}
           ></path>
           <path
             id="path18"
-            fill="none"
+            fill={color18}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M29.215 140.32l-12.217-.443-2.037-28.33 16.201.797z"
+            onClick={changeColor18}
           ></path>
           <path
             id="path52"
-            fill="gold"
+            fill={color52}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M53.649 105.881l-1.594 16.732-21.424-2.213.974-16.466z"
+            onClick={changeColor52}
           ></path>
           <path
             id="path19"
-            fill="gold"
+            fill={color19}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M52.055 122.613l-1.328 17.618-1.593 1.505-19.92-1.417 1.417-19.919z"
+            onClick={changeColor19}
           ></path>
           <path
             id="path51"
-            fill="gold"
+            fill={color51}
             fillOpacity="1"
             stroke="#000"
             strokeLinecap="butt"
@@ -667,436 +1192,480 @@ const Booking = () => {
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M63.564 114.911l1.86-27.001 1.239-.974 12.04.974-1.505 27.975z"
+            onClick={changeColor51}
           ></path>
           <path
             id="path20"
-            fill="#fff"
+            fill={color20}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M63.564 114.911l-2.125 25.32 1.417 2.567 12.748.62 1.594-27.533z"
+            onClick={changeColor20}
           ></path>
           <path
             id="path21"
-            fill="#fff"
+            fill={color21}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M75.604 143.418l12.925.708 1.594-27.356-12.925-.885z"
+            onClick={changeColor21}
           ></path>
           <path
             id="path50"
-            fill="gold"
+            fill={color50}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M90.123 116.77l1.594-27.975-13.014-.885-1.505 27.975z"
+            onClick={changeColor50}
           ></path>
           <path
             id="path22"
-            fill="#fff"
+            fill={color22}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M88.53 144.126l12.925.974 1.416-27.444-12.748-.886z"
+            onClick={changeColor22}
           ></path>
           <path
             id="path49"
-            fill="gold"
+            fill={color49}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M102.871 117.656l1.948-27.887-13.102-.974-1.594 27.975z"
+            onClick={changeColor49}
           ></path>
           <path
             id="path48"
-            fill="#fff"
+            fill={color48}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M102.871 117.656l12.926.973 1.947-27.62-12.925-1.24z"
+            onClick={changeColor48}
           ></path>
           <path
             id="path23"
-            fill="#fff"
+            fill={color23}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M101.455 145.1l12.748.797 1.594-27.268-12.926-.973z"
+            onClick={changeColor23}
           ></path>
           <path
             id="path24"
-            fill="#fff"
+            fill={color24}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M114.203 145.897l13.014.973 1.77-27.355-13.19-.886z"
+            onClick={changeColor24}
           ></path>
           <path
             id="path47"
-            fill="#fff"
+            fill={color47}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M128.987 119.515l2.037-27.533-13.28-.974-1.947 27.621z"
+            onClick={changeColor47}
           ></path>
           <path
             id="path46"
-            fill="gold"
+            fill={color46}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M128.987 119.515l13.014.885 2.036-27.444-13.013-.974z"
+            onClick={changeColor46}
           ></path>
           <path
             id="path25"
-            fill="#fff"
+            fill={color25}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M127.217 146.87l12.925.797 1.86-27.267-13.015-.885z"
+            onClick={changeColor25}
           ></path>
           <path
             id="path26"
-            fill="#fff"
+            fill={color26}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M140.142 147.667l13.014.885 2.036-27.267-13.19-.885z"
+            onClick={changeColor26}
           ></path>
           <path
             id="path45"
-            fill="gold"
+            fill={color45}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M155.192 121.285l2.125-27.178-13.28-1.151-2.036 27.444z"
+            onClick={changeColor45}
           ></path>
           <path
             id="path44"
-            fill="gold"
+            fill={color44}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M155.192 121.285l12.66.886 2.39-27.09-12.925-.974z"
+            onClick={changeColor44}
           ></path>
           <path
             id="path27"
-            fill="#fff"
+            fill={color27}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M153.156 148.552l12.837.709 1.859-27.09-12.66-.886z"
+            onClick={changeColor27}
           ></path>
           <path
             id="path28"
-            fill="gold"
+            fill={color28}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M165.993 149.26l11.863.532 1.416-1.682 1.328-25.143-12.748-.796z"
+            onClick={changeColor28}
           ></path>
           <path
             id="path43"
-            fill="gold"
+            fill={color43}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M180.6 122.967l1.505-25.408-1.062-1.505-10.8-.973-2.391 27.09z"
+            onClick={changeColor43}
           ></path>
           <path
             id="path29"
-            fill="gold"
+            fill={color29}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M193.88 123.941l-1.417 25.143 1.594 2.213 9.915.531 2.036-26.824z"
+            onClick={changeColor29}
           ></path>
           <path
             id="path42"
-            fill="gold"
+            fill={color42}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M206.008 125.004l2.567-26.913-11.508-.709-1.771 1.948-1.416 24.611z"
+            onClick={changeColor42}
           ></path>
           <path
             id="path41"
-            fill="gold"
+            fill={color41}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M206.008 125.004l13.014.973 2.744-26.824-13.19-1.062z"
+            onClick={changeColor41}
           ></path>
           <path
             id="path30"
-            fill="none"
+            fill={color30}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M203.972 151.828l12.305.797 2.745-26.648-13.014-.973z"
+            onClick={changeColor30}
           ></path>
           <path
             id="path31"
-            fill="none"
+            fill={color31}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M216.277 152.625l13.191.797 2.568-26.56-13.014-.885z"
+            onClick={changeColor31}
           ></path>
           <path
             id="path40"
-            fill="gold"
+            fill={color40}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M232.036 126.863l2.744-26.648-13.014-1.062-2.744 26.824z"
+            onClick={changeColor40}
           ></path>
           <path
             id="path32"
-            fill="none"
+            fill={color32}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M229.468 153.422l13.014.885 2.479-26.47-12.925-.974z"
+            onClick={changeColor32}
           ></path>
           <path
             id="path39"
-            fill="gold"
+            fill={color39}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M244.961 127.837l2.567-26.648-12.748-.974-2.744 26.648z"
+            onClick={changeColor39}
           ></path>
           <path
             id="path33"
-            fill="none"
+            fill={color33}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M242.482 154.307l14.253.885 1.948-26.293-13.722-1.062z"
+            onClick={changeColor33}
           ></path>
           <path
             id="path38"
-            fill="gold"
+            fill={color38}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M258.683 128.899l2.036-26.559-13.19-1.15-2.568 26.647z"
+            onClick={changeColor38}
           ></path>
           <path
             id="path34"
-            fill="gold"
+            fill={color34}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M256.735 155.192l12.837.797 1.505-26.116-12.394-.974z"
+            onClick={changeColor34}
           ></path>
           <path
             id="path37"
-            fill="gold"
+            fill={color37}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M271.077 129.873l1.594-26.648-11.952-.885-2.036 26.559z"
+            onClick={changeColor37}
           ></path>
           <path
             id="path35"
-            fill="gold"
+            fill={color35}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M269.572 155.989l14.696 1.062.443-26.204-13.634-.974z"
+            onClick={changeColor35}
           ></path>
           <path
             id="path36"
-            fill="none"
+            fill={color36}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M284.71 130.847l.709-26.56-12.748-1.062-1.594 26.648z"
+            onClick={changeColor36}
           ></path>
           <path
             id="path17"
-            fill="gold"
+            fill={color17}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M18.237 155.989L21.202 193l13.59-1.688.885-33.995z"
+            onClick={changeColor17}
           ></path>
           <path
             id="path16"
-            fill="gold"
+            fill={color16}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M34.792 191.312l12.647-1.026 1.075-32.084-12.837-.885z"
+            onClick={changeColor16}
           ></path>
           <path
             id="path15"
-            fill="gold"
+            fill={color15}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M47.439 190.286l12.673.495 1.239-31.782-12.837-.797z"
+            onClick={changeColor15}
           ></path>
           <path
             id="path14"
-            fill="gold"
+            fill={color14}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M60.112 190.781l12.836.885 1.77-31.693-13.367-.974z"
+            onClick={changeColor14}
           ></path>
           <path
             id="path13"
-            fill="gold"
+            fill={color13}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M72.948 191.666l12.749.62 1.859-31.25-12.837-1.063z"
+            onClick={changeColor13}
           ></path>
           <path
             id="path12"
-            fill="gold"
+            fill={color12}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M85.697 192.286l12.836.708 1.86-31.162-12.837-.797z"
+            onClick={changeColor12}
           ></path>
           <path
             id="path11"
-            fill="gold"
+            fill={color11}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M98.533 192.994l12.749.708 1.859-31.073-12.749-.797z"
+            onClick={changeColor11}
           ></path>
           <path
             id="path10"
-            fill="gold"
+            fill={color10}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M111.282 193.702l13.102.886 1.859-30.897-13.102-1.062z"
+            onClick={changeColor10}
           ></path>
           <path
             id="path9"
-            fill="gold"
+            fill={color9}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M124.384 194.588l12.394.708 2.125-30.808-12.66-.797z"
+            onClick={changeColor9}
           ></path>
           <path
             id="path8"
-            fill="gold"
+            fill={color8}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M136.778 195.296l12.837.708 2.213-30.542-12.925-.974z"
+            onClick={changeColor8}
           ></path>
           <path
             id="path7"
-            fill="gold"
+            fill={color7}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M149.615 196.004l12.66.797 2.39-30.366-12.837-.973z"
+            onClick={changeColor7}
           ></path>
           <path
             id="path6"
-            fill="gold"
+            fill={color6}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M162.275 196.801l14.341.974 1.417-27.798-1.417-2.568-11.951-.974z"
+            onClick={changeColor6}
           ></path>
           <path
             id="path1709"
@@ -1120,53 +1689,58 @@ const Booking = () => {
           ></path>
           <path
             id="path5"
-            fill="none"
+            fill={color5}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M203.44 199.103l13.015.708 1.682-29.392-12.66-1.062z"
+            onClick={changeColor5}
           ></path>
           <path
             id="path4"
-            fill="gold"
+            fill={color4}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M216.455 199.811l13.545 1.15.62-29.745-12.483-.797z"
+            onClick={changeColor4}
           ></path>
           <path
             id="path3"
-            fill="gold"
+            fill={color3}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M230 200.962l12.394.62 1.062-29.57-12.837-.796z"
+            onClick={changeColor3}
           ></path>
           <path
             id="path2"
-            fill="gold"
+            fill={color2}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M242.394 201.582l4.076.365 9.911-1.782-.265-27.267-12.66-.885z"
+            onClick={changeColor2}
           ></path>
           <path
             id="path1"
-            fill="gold"
+            fill={color1}
             stroke="#000"
             strokeLinecap="butt"
             strokeLinejoin="miter"
             strokeOpacity="1"
             strokeWidth="0.265"
             d="M256.381 200.165l26.927-4.049.34-21.005-27.532-2.213z"
+            onClick={changeColor1}
           ></path>
           <path
             id="path1725"
