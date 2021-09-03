@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { Button } from './Button';
+import {initializeApp} from 'firebase/app';
+import {getFirestore, collection, getDocs} from 'firebase/firestore/lite'
 
 const Section = styled.section`
     background: #000d1a;
@@ -68,10 +70,24 @@ const svgClass = styled.img`
   object-fit: fill;
 `;
 
+const firebaseConfig = {
+    apiKey: "AIzaSyAa10V-FRyzT7bMN4MOsHO7yGHzTJzmzhs",
+    authDomain: "vishakha-f47d9.firebaseapp.com",
+    databaseURL: "https://vishakha-f47d9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "vishakha-f47d9",
+    storageBucket: "vishakha-f47d9.appspot.com",
+    messagingSenderId: "1031118915788",
+    appId: "1:1031118915788:web:3eda9f7124ac56a78f5a69",
+    measurementId: "G-07SBJBMBL3"
+  };
+
+  const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore();
+  
 const Booking = () => {
-    const [color, setColor] = useState("white");
-    const [sites, setSites] = useState({});
-    const [color1, setColor1]= useState("gold");
+ 
+    //getSites(app);
+    const [color1, setColor1]= useState("white");
     const [color2, setColor2]= useState("gold");
     const [color3, setColor3]= useState("gold");
     const [color4, setColor4]= useState("gold");
@@ -158,6 +174,281 @@ const Booking = () => {
     const [color85, setColor85]= useState("gold");
     const [color86, setColor86]= useState("gold");
     const [color87, setColor87]= useState("gold");
+
+    // Get a list of sites from  database
+  async function getSites(db) {
+    const sites = collection(db, 'site');
+    const siteSnapshot = await getDocs(sites);
+    const siteList = siteSnapshot.docs.map(doc => doc.data());
+    console.log('sitelist ======');
+    console.log(siteList[0].array[0]);
+    if(siteList[0] && siteList[0].array[1]){
+        setColor1(siteList[0].array[1])
+    }
+    if(siteList[0] && siteList[0].array[2]){
+        setColor2(siteList[0].array[2])
+    }
+    if(siteList[0] && siteList[0].array[3]){
+        setColor3(siteList[0].array[3])
+    }
+    if(siteList[0] && siteList[0].array[4]){
+        setColor4(siteList[0].array[4])
+    }
+    if(siteList[0] && siteList[0].array[5]){
+        setColor5(siteList[0].array[5])
+    }
+    if(siteList[0] && siteList[0].array[6]){
+        setColor6(siteList[0].array[6])
+    }
+    if(siteList[0] && siteList[0].array[7]){
+        setColor7(siteList[0].array[7])
+    }
+    if(siteList[0] && siteList[0].array[8]){
+        setColor8(siteList[0].array[8])
+    }
+    if(siteList[0] && siteList[0].array[9]){
+        setColor9(siteList[0].array[9])
+    }
+    if(siteList[0] && siteList[0].array[10]){
+        setColor10(siteList[0].array[10])
+    }
+    if(siteList[0] && siteList[0].array[11]){
+        setColor11(siteList[0].array[11])
+    }
+    if(siteList[0] && siteList[0].array[12]){
+        setColor12(siteList[0].array[12])
+    }
+    if(siteList[0] && siteList[0].array[13]){
+        setColor13(siteList[0].array[13])
+    }
+    if(siteList[0] && siteList[0].array[14]){
+        setColor14(siteList[0].array[14])
+    }
+    if(siteList[0] && siteList[0].array[15]){
+        setColor15(siteList[0].array[15])
+    }
+    if(siteList[0] && siteList[0].array[16]){
+        setColor16(siteList[0].array[16])
+    }
+    if(siteList[0] && siteList[0].array[17]){
+        setColor17(siteList[0].array[17])
+    }
+    if(siteList[0] && siteList[0].array[18]){
+        setColor18(siteList[0].array[18])
+    }
+    if(siteList[0] && siteList[0].array[19]){
+        setColor19(siteList[0].array[19])
+    }
+    if(siteList[0] && siteList[0].array[20]){
+        setColor20(siteList[0].array[20])
+    }
+    if(siteList[0] && siteList[0].array[21]){
+        setColor21(siteList[0].array[21])
+    }
+    if(siteList[0] && siteList[0].array[22]){
+        setColor22(siteList[0].array[22])
+    }
+    if(siteList[0] && siteList[0].array[23]){
+        setColor23(siteList[0].array[23])
+    }
+    if(siteList[0] && siteList[0].array[24]){
+        setColor24(siteList[0].array[24])
+    }
+    if(siteList[0] && siteList[0].array[25]){
+        setColor25(siteList[0].array[25])
+    }
+    if(siteList[0] && siteList[0].array[26]){
+        setColor26(siteList[0].array[26])
+    }
+    if(siteList[0] && siteList[0].array[27]){
+        setColor27(siteList[0].array[27])
+    }
+    if(siteList[0] && siteList[0].array[28]){
+        setColor28(siteList[0].array[28])
+    }
+    if(siteList[0] && siteList[0].array[29]){
+        setColor29(siteList[0].array[29])
+    }
+    if(siteList[0] && siteList[0].array[30]){
+        setColor30(siteList[0].array[30])
+    }
+    if(siteList[0] && siteList[0].array[31]){
+        setColor31(siteList[0].array[31])
+    }
+    if(siteList[0] && siteList[0].array[32]){
+        setColor32(siteList[0].array[32])
+    }
+    if(siteList[0] && siteList[0].array[33]){
+        setColor33(siteList[0].array[33])
+    }
+    if(siteList[0] && siteList[0].array[34]){
+        setColor34(siteList[0].array[34])
+    }
+    if(siteList[0] && siteList[0].array[35]){
+        setColor35(siteList[0].array[35])
+    }
+    if(siteList[0] && siteList[0].array[36]){
+        setColor36(siteList[0].array[36])
+    }
+    if(siteList[0] && siteList[0].array[37]){
+        setColor37(siteList[0].array[37])
+    }
+    if(siteList[0] && siteList[0].array[38]){
+        setColor38(siteList[0].array[38])
+    }
+    if(siteList[0] && siteList[0].array[39]){
+        setColor39(siteList[0].array[39])
+    }
+    if(siteList[0] && siteList[0].array[40]){
+        setColor40(siteList[0].array[40])
+    }
+    if(siteList[0] && siteList[0].array[41]){
+        setColor41(siteList[0].array[41])
+    }
+    if(siteList[0] && siteList[0].array[42]){
+        setColor42(siteList[0].array[42])
+    }
+    if(siteList[0] && siteList[0].array[43]){
+        setColor43(siteList[0].array[43])
+    }
+    if(siteList[0] && siteList[0].array[44]){
+        setColor44(siteList[0].array[44])
+    }
+    if(siteList[0] && siteList[0].array[45]){
+        setColor45(siteList[0].array[45])
+    }
+    if(siteList[0] && siteList[0].array[46]){
+        setColor46(siteList[0].array[46])
+    }
+    if(siteList[0] && siteList[0].array[47]){
+        setColor47(siteList[0].array[47])
+    }
+    if(siteList[0] && siteList[0].array[48]){
+        setColor48(siteList[0].array[48])
+    }
+    if(siteList[0] && siteList[0].array[49]){
+        setColor49(siteList[0].array[49])
+    }
+    if(siteList[0] && siteList[0].array[50]){
+        setColor50(siteList[0].array[50])
+    }
+    if(siteList[0] && siteList[0].array[51]){
+        setColor51(siteList[0].array[51])
+    }
+    if(siteList[0] && siteList[0].array[52]){
+        setColor52(siteList[0].array[52])
+    }
+    if(siteList[0] && siteList[0].array[53]){
+        setColor53(siteList[0].array[53])
+    }
+    if(siteList[0] && siteList[0].array[54]){
+        setColor54(siteList[0].array[54])
+    }
+    if(siteList[0] && siteList[0].array[55]){
+        setColor55(siteList[0].array[55])
+    }
+    if(siteList[0] && siteList[0].array[56]){
+        setColor56(siteList[0].array[56])
+    }
+    if(siteList[0] && siteList[0].array[57]){
+        setColor57(siteList[0].array[57])
+    }
+    if(siteList[0] && siteList[0].array[58]){
+        setColor58(siteList[0].array[58])
+    }
+    if(siteList[0] && siteList[0].array[59]){
+        setColor59(siteList[0].array[59])
+    }
+    if(siteList[0] && siteList[0].array[60]){
+        setColor60(siteList[0].array[60])
+    }
+    if(siteList[0] && siteList[0].array[61]){
+        setColor61(siteList[0].array[61])
+    }
+    if(siteList[0] && siteList[0].array[62]){
+        setColor62(siteList[0].array[62])
+    }
+    if(siteList[0] && siteList[0].array[63]){
+        setColor63(siteList[0].array[63])
+    }
+    if(siteList[0] && siteList[0].array[64]){
+        setColor64(siteList[0].array[64])
+    }
+    if(siteList[0] && siteList[0].array[65]){
+        setColor65(siteList[0].array[65])
+    }
+    if(siteList[0] && siteList[0].array[66]){
+        setColor66(siteList[0].array[66])
+    }
+    if(siteList[0] && siteList[0].array[67]){
+        setColor67(siteList[0].array[67])
+    }
+    if(siteList[0] && siteList[0].array[68]){
+        setColor68(siteList[0].array[68])
+    }
+    if(siteList[0] && siteList[0].array[69]){
+        setColor69(siteList[0].array[69])
+    }
+    if(siteList[0] && siteList[0].array[70]){
+        setColor70(siteList[0].array[70])
+    }
+    if(siteList[0] && siteList[0].array[71]){
+        setColor71(siteList[0].array[71])
+    }
+    if(siteList[0] && siteList[0].array[72]){
+        setColor72(siteList[0].array[72])
+    }
+    if(siteList[0] && siteList[0].array[73]){
+        setColor73(siteList[0].array[73])
+    }
+    if(siteList[0] && siteList[0].array[74]){
+        setColor74(siteList[0].array[74])
+    }
+    if(siteList[0] && siteList[0].array[75]){
+        setColor75(siteList[0].array[75])
+    }
+    if(siteList[0] && siteList[0].array[76]){
+        setColor76(siteList[0].array[76])
+    }
+    if(siteList[0] && siteList[0].array[77]){
+        setColor77(siteList[0].array[77])
+    }
+    if(siteList[0] && siteList[0].array[78]){
+        setColor78(siteList[0].array[78])
+    }
+    if(siteList[0] && siteList[0].array[79]){
+        setColor79(siteList[0].array[79])
+    }
+    if(siteList[0] && siteList[0].array[80]){
+        setColor80(siteList[0].array[80])
+    }
+    if(siteList[0] && siteList[0].array[81]){
+        setColor81(siteList[0].array[81])
+    }
+    if(siteList[0] && siteList[0].array[82]){
+        setColor82(siteList[0].array[82])
+    }
+    if(siteList[0] && siteList[0].array[83]){
+        setColor83(siteList[0].array[83])
+    }
+    if(siteList[0] && siteList[0].array[84]){
+        setColor84(siteList[0].array[84])
+    }
+    if(siteList[0] && siteList[0].array[85]){
+        setColor85(siteList[0].array[85])
+    }
+    if(siteList[0] && siteList[0].array[86]){
+        setColor86(siteList[0].array[86])
+    }
+    if(siteList[0] && siteList[0].array[87]){
+        setColor87(siteList[0].array[87])
+    }
+    return siteList;
+}
+
+useEffect(() => {
+    getSites(db);
+}, []);
     
     function changeColor(prevColor) {
         if(prevColor=== "gold"){
