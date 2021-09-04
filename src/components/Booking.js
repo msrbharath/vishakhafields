@@ -2,7 +2,8 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import { Button } from './Button';
 import {initializeApp} from 'firebase/app';
-import {getFirestore, collection, getDocs} from 'firebase/firestore/lite'
+import {getFirestore, collection, getDocs, addDoc, updateDoc, doc} from 'firebase/firestore/lite'
+import ContactForm from './ContactForm';
 
 const Section = styled.section`
     background: #000d1a;
@@ -28,6 +29,48 @@ const ColumnLeft = styled.div`
   justify-content: flex-start;
   padding: 1rem;
 `;
+
+export const ButtonB = styled.button`
+    background: ${({ primary}) => (primary ? '#000d1a': '#CD853F')};
+    white-space: nowrap;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    max-width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: ${({big}) => (big?'16px 40px': '14px 24px')};
+    color: ${({primary}) => (primary?'#fff': '#000d1a')};
+    font-size: ${({big}) => (big?'20px': '14px')};
+    border-radius: ${({ round }) => (round ? '50px' : '0px')};
+
+    &:hover{
+        transform: translateY(-2px);
+    }
+`;
+
+const Input = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: black;
+  background: palegoldenrod;
+  border: none;
+  border-radius: 3px;
+`;
+
+const ColumnCenter = styled.div`
+ display: flex;
+  flex-wrap: wrap;
+  margin: 0px -15px;
+  justify-content: center;
+  padding: 1rem;
+`;
+
 const Content = styled.div`
 flex: 0 0 50%;
 
@@ -449,6 +492,35 @@ const Booking = () => {
 useEffect(() => {
     getSites(db);
 }, []);
+
+    async function syncSites(e){
+        e.preventDefault();
+        const { passcode } = e.target.elements;
+        if(passcode.value == '641107'){
+            const sites = collection(db, 'site');
+            const siteSnapshot = await getDocs(sites);
+            let siteList = siteSnapshot.docs.map(doc => doc.data());
+            let arr=[''];
+            let tempColor = 'white';
+            for(let i=1; i<=87; i++){
+                tempColor = eval('color'+i)
+                if(tempColor == "green"){
+                    arr[i] = "gold"
+                }else {
+                    arr[i] = tempColor;
+                }
+            }
+            siteList[0].array = arr;
+            //siteSnapshot.docs[0].data().array = arr;
+            const documentRef = doc(db, "site","HTIX0lDBFEvG3l5zBgSW" );
+            await updateDoc(documentRef, {
+                array: arr
+            });
+            getSites(db);
+            alert('Site(s) blocked!')
+        }
+        
+    }
     
     function changeColor(prevColor) {
         if(prevColor=== "gold"){
@@ -963,8 +1035,9 @@ useEffect(() => {
                         data-aos-once='true'
                         data-aos-anchor-placement='center bottom'
                         /> */}
-                        
-
+                        <ColumnCenter>
+                        <h1>Aadhi Residence</h1>
+                        </ColumnCenter>
                         <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -3961,11 +4034,18 @@ useEffect(() => {
                         </p>
                         <br></br>
                         <br></br>
-                        <p>
-                        Select a site from above to book. 
+                        
+                    </ColumnLeft>
+                    <p>
+                        Select a site from above and enter passcode to book. 
                             
                         </p>
-                        <Button to='/homes'>Learn More</Button>
+                        <form onSubmit={syncSites}>
+                            <Input id="passcode" type="text" defaultValue="Enter passcode" required></Input>
+                            <ButtonB  type="submit">Block the selected sites</ButtonB>
+                        </form>
+                        
+                    <ColumnLeft>
                     </ColumnLeft>
                     {/* <ColumnRight>
                         <Image
@@ -3977,6 +4057,7 @@ useEffect(() => {
                         />
                     </ColumnRight> */}
                 </Wrap>
+                {/* <ContactForm/> */}
             </Container>
         </Section>
     );
