@@ -122,7 +122,7 @@ const Navbar = ({toggle}) => {
   
     let style = {
       backgroundColor:
-        navbar || location.pathname !== '/' ? 'white' : 'transparent',
+        navbar || location.pathname !== '/' ? 'white' : 'white',
       transition: '0.4s'
     };
     return (
