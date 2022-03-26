@@ -5,7 +5,8 @@ import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 //import {FaBars} from 'react-icons/fa';
 import Bars from '../images/bars.svg';
-import SriVishakha from '../images/SriVishakhaFields.svg';
+import SriVishakha from '../images/srivishakhafields_transparent.png';
+//import SriVishakha from '../images/SriVishakhaFields.png';
 
 const Nav = styled.nav`
     height: 60px;
@@ -27,13 +28,20 @@ const NavLink = css`
     text-decoration: none;
 `;
 
-const Logo = styled(Link)`
-    ${NavLink}
-    background-image: url(${SriVishakha}); 
-    font-style: italic;
-    display: block;
+const VishakhaImage = styled.img`
+    height: 100%;
+    width: 15%;
+    object-fit: fill;
 `;
 
+const Logo = styled(Link)`
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+`;
+
+/*
 const MenuBars = styled.i`
     display: none;
 
@@ -49,13 +57,25 @@ const MenuBars = styled.i`
         right: 0;
         transform: translate(-50%, 25%);
     }
+`;*/
+
+const MenuBars = styled.i`
+display: block;
+background-image: url(${Bars});
+background-size: contain;
+height: 40px;
+width: 40px;
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 0;
+transform: translate(-50%, 25%);
 `;
 
 
 const NavMenu = styled.div`
     display: flex;
     align-items: center;
-    margin-right: -48px;
 
     @media screen and (max-width: 768px) {
         display: none;
@@ -102,26 +122,26 @@ const Navbar = ({toggle}) => {
   
     let style = {
       backgroundColor:
-        navbar || location.pathname !== '/' ? '#CD853F' : 'transparent',
+        navbar || location.pathname !== '/' ? 'white' : 'transparent',
       transition: '0.4s'
     };
     return (
         <Nav style={style}>
-            <Logo to='/'>Sri Vishakha</Logo>
+            <Logo to='/'><VishakhaImage src={SriVishakha}/></Logo>
             <MenuBars onClick={toggle}/>
-            <NavMenu>
+            {/* <NavMenu>
                 {menuData.map((item, index) => (
                     <NavMenuLinks to={item.link} key={index}>
                         {item.title}
                     </NavMenuLinks>
                 ))}
-            </NavMenu>
-            <NavBtn>
+            </NavMenu> */}
+            {/* <NavBtn>
                 <Button to="/book" primary='true'>Book A Site</Button>
-            </NavBtn>
-            <NavBtn>
+            </NavBtn> */}
+            {/* <NavBtn>
                 <Button to="/enquire" primary='true'>Enquire Now</Button>
-            </NavBtn>
+            </NavBtn> */}
         </Nav>
     );
 };
