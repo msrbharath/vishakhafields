@@ -11,9 +11,10 @@ const Home = () => {
     <>
       <Hero slides={SliderData} />
       <InfoSection {...InfoData} />
+      <InfoSection {...InfoDataTwo} />
       <Listings />
       <Features />
-      <InfoSection {...InfoDataTwo} />
+      
     </>
   );
 };

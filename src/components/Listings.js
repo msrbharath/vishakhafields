@@ -2,8 +2,8 @@ import React from 'react';
 import { IoMdArrowRoundForward } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import HomeOne from '../images/img1.jpg';
-import HomeTwo from '../images/img3.jpg';
+import HomeOne from '../images/4.jpeg';
+import HomeTwo from '../images/5.jpeg';
 
 const Section = styled.section`
     width: 100%;
@@ -86,7 +86,7 @@ const Listings = () => {
                     data-aos-once='true'
                     data-aos-anchor-placement='center bottom'
                    >
-                       View our newest homes 
+                       View our Projects
                     </h1>
                </Heading>
                 <InfoRow>
@@ -97,7 +97,7 @@ const Listings = () => {
                         data-aos-anchor-placement='center bottom'
                     >
                         <Image src={HomeOne} alt='home'/>
-                        <h2>8 Bed 10 Bath House in Kovilpalayam</h2>
+                        <h2>Industrial sites in PG Pudur</h2>
                         <InfoLink to='/homes'>
                             <p>View Details</p>
                             <Arrow/>
@@ -119,7 +119,7 @@ const Listings = () => {
                                 }
                             `}
                         />
-                        <h2>8 Bed 10 Bath House in PG Pudur</h2>
+                        <h2>Induvidual Sites in Kovilpalayam</h2>
                         <InfoLink to='/homes'>
                             <p>View Details</p>
                             <Arrow />

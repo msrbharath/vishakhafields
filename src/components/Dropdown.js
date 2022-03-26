@@ -86,11 +86,11 @@ const Dropdown = ({ isOpen, toggle }) => {
                         Book A Site
                     </Button>
                 </BtnWrap>
-                <BtnWrap>
+                {/* <BtnWrap>
                     <Button primary='true' round='true' big='true' to='/contact'>
                         Contact Us
                     </Button>
-                </BtnWrap>
+                </BtnWrap> */}
             </DropdownWrapper>
         </DropdownContainer>
     );

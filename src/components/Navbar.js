@@ -3,7 +3,7 @@ import styled, {css} from 'styled-components/macro';
 import {Link, useLocation } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
-//import {FaBars} from 'react-icons/fa';
+import {FaBars} from 'react-icons/fa';
 import Bars from '../images/bars.svg';
 import SriVishakha from '../images/srivishakhafields_transparent.png';
 //import SriVishakha from '../images/SriVishakhaFields.png';
@@ -59,9 +59,9 @@ const MenuBars = styled.i`
     }
 `;*/
 
-const MenuBars = styled.i`
+const MenuBars = styled(FaBars)`
 display: block;
-background-image: url(${Bars});
+--background-image: url(${Bars});
 background-size: contain;
 height: 40px;
 width: 40px;

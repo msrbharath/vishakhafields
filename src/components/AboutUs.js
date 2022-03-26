@@ -95,7 +95,7 @@ const AboutUs = () => {
                     </ColumnLeft>
                     <ColumnRight>
                         <Image
-                        src={ImageOne}
+                        //src={ImageOne}
                         data-aos='fade-left'
                         data-aos-duration='1200'
                         data-aos-once='true'

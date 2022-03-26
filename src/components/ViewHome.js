@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from './Button';
-import ImageOne from '../images/kitchen-1.jpg';
+import ImageOne from '../images/6.jpg';
 
 const Section = styled.section`
     background: #000d1a;
@@ -82,7 +82,7 @@ const ViewHome = () => {
                         data-aos-once='true'
                         data-aos-anchor-placement='center bottom'
                         >
-                        <h1>Stunning Interior</h1>
+                        <h1>Completed Projects</h1>
                         <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Deserunt maxime commodi rem dignissimos, laborum eum beatae
