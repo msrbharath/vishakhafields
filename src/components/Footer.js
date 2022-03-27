@@ -143,7 +143,7 @@ const Footer = () => {
               <Youtube />
             </a>
             <a
-              href='//www.instagram.com/srivishakha'
+              href='//www.instagram.com/vishakha_fields/'
               rel='noopener noreferrer'
               target='_blank'
             >
